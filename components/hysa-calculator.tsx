@@ -11,7 +11,7 @@ import {
   ResponsiveContainer,
   Legend,
 } from "recharts";
-import { BarChart2, Clock } from "lucide-react";
+import { BarChart2, Clock, AlertTriangle } from "lucide-react";
 import { compound, formatCurrency, formatCompact } from "@/lib/calculator";
 import { ParamSlider } from "@/components/param-slider";
 import { InfoCard } from "@/components/info-card";
@@ -23,11 +23,14 @@ interface HYSAProps {
   symbol: string;
 }
 
+const SMART_RATE = 4.5;
+const LAZY_RATE = 0.01;
+
 export function HYSACalculator({ symbol }: HYSAProps) {
   const [deposit, setDeposit] = useState(10000);
   const [monthly, setMonthly] = useState(200);
-  const [hyRate, setHyRate] = useState(4.3);
-  const [bbRate, setBbRate] = useState(0.01);
+  const [hyRate, setHyRate] = useState(SMART_RATE);
+  const [bbRate, setBbRate] = useState(LAZY_RATE);
 
   const milestones = useMemo(
     () =>
@@ -48,14 +51,25 @@ export function HYSACalculator({ symbol }: HYSAProps) {
       Array.from({ length: 11 }, (_, i) => ({
         year: i,
         "High-Yield": Math.round(compound(deposit, monthly, hyRate, i)),
-        "Big Bank": Math.round(compound(deposit, monthly, bbRate, i)),
+        "Lazy Bank": Math.round(compound(deposit, monthly, bbRate, i)),
       })),
     [deposit, monthly, hyRate, bbRate]
   );
 
   const gap10 = milestones[2].gap;
 
-  const shareText = `Worth It? -- HYSA\nDeposit: ${formatCurrency(deposit, symbol)} | +${formatCurrency(monthly, symbol)}/mo\nRate: ${hyRate}% vs ${bbRate}%\n10-Year Gap: ${formatCurrency(gap10, symbol)}\nworthitindex.app`;
+  // Hype vs Reality: explicit interest-earned comparison at locked rates
+  const hyInterest10 = useMemo(
+    () => Math.round(compound(deposit, monthly, SMART_RATE, 10) - (deposit + monthly * 120)),
+    [deposit, monthly]
+  );
+  const lazyInterest10 = useMemo(
+    () => Math.round(compound(deposit, monthly, LAZY_RATE, 10) - (deposit + monthly * 120)),
+    [deposit, monthly]
+  );
+  const lazyTax = hyInterest10 - lazyInterest10;
+
+  const shareText = `Worth It? -- HYSA\nDeposit: ${formatCurrency(deposit, symbol)} | +${formatCurrency(monthly, symbol)}/mo\nRate: ${hyRate}% vs ${bbRate}%\n10-Year Gap: ${formatCurrency(gap10, symbol)}\nThe Lazy Tax: ${formatCurrency(lazyTax, symbol)}\nworthitindex.app`;
 
   return (
     <div className="flex flex-col gap-6">
@@ -92,14 +106,14 @@ export function HYSACalculator({ symbol }: HYSAProps) {
           hint="Current best HYSA ~4-5%"
         />
         <ParamSlider
-          label="Big Bank Rate"
+          label="Lazy Bank Rate"
           value={bbRate}
           min={0.01}
           max={2}
           step={0.01}
           onChange={setBbRate}
           format={(v) => `${v.toFixed(2)}%`}
-          hint="Chase / BofA / Wells avg"
+          hint="Chase / BofA / Wells avg: 0.01%"
         />
       </div>
 
@@ -117,6 +131,55 @@ export function HYSACalculator({ symbol }: HYSAProps) {
           <strong className="text-card">compound math.</strong>
         </p>
         <CopyButton text={shareText} />
+      </div>
+
+      {/* Lazy Tax callout */}
+      <div className="rounded-xl border-2 border-destructive/30 bg-destructive/5 p-5">
+        <div className="mb-3 flex items-center gap-2.5">
+          <div className="flex size-8 items-center justify-center rounded-lg bg-destructive/10">
+            <AlertTriangle className="size-4 text-destructive" />
+          </div>
+          <div>
+            <p className="text-xs font-bold uppercase tracking-wider text-destructive">
+              Hype vs. Reality
+            </p>
+            <p className="text-[11px] text-muted-foreground">
+              {SMART_RATE}% HYSA vs {LAZY_RATE}% Lazy Bank -- 10 year comparison
+            </p>
+          </div>
+        </div>
+        <div className="mb-4 grid grid-cols-3 gap-3">
+          <div className="rounded-lg border bg-card p-3 text-center">
+            <p className="mb-0.5 text-[10px] font-bold uppercase tracking-wide text-muted-foreground">
+              Interest Earned at {SMART_RATE}%
+            </p>
+            <p className="text-lg font-black text-primary">
+              {formatCurrency(hyInterest10, symbol)}
+            </p>
+          </div>
+          <div className="rounded-lg border bg-card p-3 text-center">
+            <p className="mb-0.5 text-[10px] font-bold uppercase tracking-wide text-muted-foreground">
+              Interest Earned at {LAZY_RATE}%
+            </p>
+            <p className="text-lg font-black text-muted-foreground">
+              {formatCurrency(lazyInterest10, symbol)}
+            </p>
+          </div>
+          <div className="rounded-lg border-2 border-destructive/20 bg-destructive/5 p-3 text-center">
+            <p className="mb-0.5 text-[10px] font-bold uppercase tracking-wide text-destructive">
+              The Difference
+            </p>
+            <p className="text-lg font-black text-destructive">
+              {formatCurrency(lazyTax, symbol)}
+            </p>
+          </div>
+        </div>
+        <p className="text-center text-sm font-extrabold text-destructive">
+          {"\"The Lazy Tax you are paying\""}
+          <span className="ml-1 font-normal text-muted-foreground">
+            -- {formatCurrency(lazyTax, symbol)} in lost interest over 10 years by keeping your money at {LAZY_RATE}%.
+          </span>
+        </p>
       </div>
 
       {/* Milestone cards */}
@@ -140,7 +203,7 @@ export function HYSACalculator({ symbol }: HYSAProps) {
                 {"-"}{formatCompact(gap, symbol)}
               </p>
               <p className="text-[10px] text-muted-foreground">
-                lost at big bank
+                lost at lazy bank
               </p>
             </div>
           </div>
@@ -187,7 +250,7 @@ export function HYSACalculator({ symbol }: HYSAProps) {
             />
             <Area
               type="monotone"
-              dataKey="Big Bank"
+              dataKey="Lazy Bank"
               stroke="#ef4444"
               strokeWidth={2}
               fill="url(#bbGrad)"

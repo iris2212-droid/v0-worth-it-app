@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   TrendingUp,
   Globe,
@@ -9,15 +9,18 @@ import {
   DollarSign,
   Car,
   ArrowRight,
+  Loader2,
 } from "lucide-react";
 import {
   PRESETS,
   CURRENCIES,
+  detectUserCountry,
   type PresetKey,
   type UnitSystem,
 } from "@/lib/calculator";
 import { HYSACalculator } from "@/components/hysa-calculator";
 import { EVCalculator } from "@/components/ev-calculator";
+import { RecommendedTools } from "@/components/recommended-tools";
 import { Badge } from "@/components/ui/badge";
 import {
   Select,
@@ -29,18 +32,24 @@ import {
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { cn } from "@/lib/utils";
 
-const PRESET_FLAGS: Record<PresetKey, string> = {
-  USA: "US",
-  UK: "GB",
-  EU: "EU",
-  IN: "IN",
-};
-
 export default function WorthItPage() {
   const [currency, setCurrency] = useState("USD");
   const [unit, setUnit] = useState<UnitSystem>("imperial");
   const [preset, setPreset] = useState<PresetKey>("USA");
   const [showPresets, setShowPresets] = useState(false);
+  const [geoLoading, setGeoLoading] = useState(true);
+
+  // Auto-detect user's country on mount
+  useEffect(() => {
+    let cancelled = false;
+    detectUserCountry().then((detected) => {
+      if (cancelled) return;
+      applyPreset(detected);
+      setGeoLoading(false);
+    });
+    return () => { cancelled = true; };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const symbol =
     CURRENCIES.find((c) => c.code === currency)?.symbol || "$";
@@ -73,6 +82,14 @@ export default function WorthItPage() {
 
           {/* Controls */}
           <div className="flex flex-wrap items-center gap-2">
+            {/* Geo detection indicator */}
+            {geoLoading && (
+              <div className="flex items-center gap-1.5 rounded-lg bg-primary/10 px-2.5 py-1.5 text-[11px] font-semibold text-primary">
+                <Loader2 className="size-3 animate-spin" />
+                Detecting...
+              </div>
+            )}
+
             {/* Preset dropdown */}
             <div className="relative">
               <button
@@ -101,7 +118,7 @@ export default function WorthItPage() {
                           : "text-card-foreground hover:bg-secondary"
                       )}
                     >
-                      {PRESET_FLAGS[key]} {PRESETS[key].label}
+                      {PRESETS[key].label}
                     </button>
                   ))}
                 </div>
@@ -159,6 +176,11 @@ export default function WorthItPage() {
             Real numbers. No salesmen. Move sliders, see the truth. Share the
             math with anyone who needs convincing.
           </p>
+          {!geoLoading && (
+            <p className="mt-3 text-xs font-medium text-muted-foreground/60">
+              Auto-configured for <span className="font-bold text-primary">{PRESETS[preset].label}</span> based on your location
+            </p>
+          )}
         </div>
       </header>
 
@@ -176,7 +198,7 @@ export default function WorthItPage() {
                   High-Yield Savings
                 </p>
                 <p className="text-[11px] text-muted-foreground">
-                  HYSA vs Big Bank
+                  HYSA vs Lazy Bank
                 </p>
               </div>
               <ArrowRight className="ml-auto hidden size-3 text-primary data-[state=active]:block" />
@@ -205,6 +227,11 @@ export default function WorthItPage() {
             <EVCalculator symbol={symbol} unit={unit} />
           </TabsContent>
         </Tabs>
+
+        {/* Recommended Tools by Region */}
+        <section className="mt-10 rounded-2xl border bg-card p-6 shadow-sm">
+          <RecommendedTools preset={preset} />
+        </section>
       </main>
 
       {/* Footer */}
