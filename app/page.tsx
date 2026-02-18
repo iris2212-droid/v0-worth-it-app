@@ -21,6 +21,7 @@ import {
 import { HYSACalculator } from "@/components/hysa-calculator";
 import { EVCalculator } from "@/components/ev-calculator";
 import { RecommendedTools } from "@/components/recommended-tools";
+import { TrustFAQ } from "@/components/trust-faq";
 import { Badge } from "@/components/ui/badge";
 import {
   Select,
@@ -231,6 +232,11 @@ export default function WorthItPage() {
         {/* Recommended Tools by Region */}
         <section className="mt-10 rounded-2xl border bg-card p-6 shadow-sm">
           <RecommendedTools preset={preset} />
+        </section>
+
+        {/* Trust FAQ */}
+        <section className="mt-10 rounded-2xl border bg-card p-6 shadow-sm">
+          <TrustFAQ />
         </section>
       </main>
 
