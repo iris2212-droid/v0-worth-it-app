@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Link from "next/link";
 import {
   TrendingUp,
   Globe,
@@ -307,18 +308,25 @@ export default function WorthItPage() {
 
             {/* Legal links */}
             <div className="flex items-center gap-4 border-t pt-3">
-              <a
-                href="#terms-of-use"
+              <Link
+                href="/terms"
                 className="text-[11px] font-semibold text-muted-foreground underline-offset-2 transition-colors hover:text-foreground hover:underline"
               >
                 Terms of Use
-              </a>
+              </Link>
               <span className="text-border">|</span>
-              <a
-                href="#privacy-policy"
+              <Link
+                href="/privacy"
                 className="text-[11px] font-semibold text-muted-foreground underline-offset-2 transition-colors hover:text-foreground hover:underline"
               >
                 Privacy Policy
+              </Link>
+              <span className="text-border">|</span>
+              <a
+                href="mailto:hello@worthitindex.app"
+                className="text-[11px] font-semibold text-muted-foreground underline-offset-2 transition-colors hover:text-foreground hover:underline"
+              >
+                Contact Us
               </a>
             </div>
           </div>
