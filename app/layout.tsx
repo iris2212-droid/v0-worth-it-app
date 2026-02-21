@@ -10,7 +10,11 @@ export const metadata: Metadata = {
   title: 'Worth It? Index — Real Math, No Salesmen',
   description: 'Interactive financial calculators that cut through the noise. Compare HYSA vs big banks, calculate EV breakeven points, and make data-driven money decisions.',
   generator: 'v0.app',
-  <meta name="impact-site-verification" content="c3740399-6478-40f9-89d1-5576d51daf95">
+  verification: {
+    other: {
+      "impact-site-verification": "c3740399-6478-40f9-89d1-5576d51daf95",
+    },
+  },
   icons: {
     icon: [
       {
