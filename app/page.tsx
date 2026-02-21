@@ -323,7 +323,7 @@ export default function WorthItPage() {
               </Link>
               <span className="text-border">|</span>
               <a
-                href="mailto:worth.it,app@outlook.com"
+                href="mailto:worth.it.app@outlook.com"
                 className="text-[11px] font-semibold text-muted-foreground underline-offset-2 transition-colors hover:text-foreground hover:underline"
               >
                 Contact Us

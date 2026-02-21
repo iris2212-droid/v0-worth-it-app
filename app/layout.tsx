@@ -6,11 +6,12 @@ import './globals.css'
 const _inter = Inter({ subsets: ["latin"] });
 const _jetbrainsMono = JetBrains_Mono({ subsets: ["latin"] });
 
-export const metadata: Metadata = {
-  title: 'Worth It? Index — Real Math, No Salesmen',
-  description: 'Interactive financial calculators that cut through the noise. Compare HYSA vs big banks, calculate EV breakeven points, and make data-driven money decisions.',
-  generator: 'v0.app',
-  verification: { other: { "impact-site-verification": "11c4d98e-c4d4-48ca-96ef-5cb368827ab4" } },
+generator: 'v0.app',
+  verification: {
+    other: {
+      "impact-site-verification": "11c4d98e-c4d4-48ca-96ef-5cb368827ab4",
+    },
+  },
   icons: {
     icon: [
       {
