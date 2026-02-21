@@ -1,3 +1,11 @@
+import type { Metadata } from 'next'
+import { Inter, JetBrains_Mono } from 'next/font/google'
+import { Analytics } from '@vercel/analytics/next'
+import './globals.css'
+
+const _inter = Inter({ subsets: ["latin"] });
+const _jetbrainsMono = JetBrains_Mono({ subsets: ["latin"] });
+
 export const metadata: Metadata = {
   title: 'Worth It? Index — Real Math, No Salesmen',
   description: 'Interactive financial calculators that cut through the noise. Compare HYSA vs big banks, calculate EV breakeven points, and make data-driven money decisions.',
@@ -24,4 +32,19 @@ export const metadata: Metadata = {
     ],
     apple: '/apple-icon.png',
   },
+}
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode
+}>) {
+  return (
+    <html lang="en">
+      <body className="font-sans antialiased">
+        {children}
+        <Analytics />
+      </body>
+    </html>
+  )
 }
