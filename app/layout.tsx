@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   generator: 'v0.app',
   verification: {
     other: {
-      "impact-site-verification": "c3740399-6478-40f9-89d1-5576d51daf95",
+      "impact-site-verification": "11c4d98e-c4d4-48ca-96ef-5cb368827ab4",
     },
   },
   icons: {
