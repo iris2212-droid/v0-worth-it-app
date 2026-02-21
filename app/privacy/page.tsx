@@ -151,10 +151,10 @@ export default function PrivacyPolicyPage() {
             <p>
               If you have questions about this Privacy Policy, contact us at{" "}
               <a
-                href="mailto:legal@worthitindex.app"
+                href="mailto:worth.it.app@outlook.com"
                 className="font-semibold text-primary underline underline-offset-2 transition-colors hover:text-primary/80"
               >
-                legal@worthitindex.app
+                worth.it.app@outlook.com
               </a>
               .
             </p>
