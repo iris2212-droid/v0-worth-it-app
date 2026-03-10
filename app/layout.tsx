@@ -15,8 +15,8 @@ export const metadata: Metadata = {
   other: {
     "impact-site-verification": "11c4d98e-c4d4-48ca-96ef-5cb368827ab4"
   }
-},
-
+ },
+}
 export default function RootLayout({
   children,
 }: Readonly<{
