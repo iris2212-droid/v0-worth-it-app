@@ -11,10 +11,11 @@ export const metadata: Metadata = {
   description: 'Interactive financial calculators that cut through the noise. Compare HYSA vs big banks and calculate EV breakeven points.',
   generator: 'v0.app',
   verification: {
-    <meta name="google-site-verification" content="a-XjUs1Nrwin7qQSH2OPyvMvcLPZUbDuOv2zQfn4iEU" />
-    other: { "impact-site-verification": "11c4d98e-c4d4-48ca-96ef-5cb368827ab4" },
-  },
-}
+  google: "a-XjUs1Nrwin7qQSH2OPyvMvcLPZUbDuOv2zQfn4iEU",
+  other: {
+    "impact-site-verification": "11c4d98e-c4d4-48ca-96ef-5cb368827ab4"
+  }
+},
 
 export default function RootLayout({
   children,
