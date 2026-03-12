@@ -182,7 +182,7 @@ export default function WorthItPage() {
             variant="outline"
             className="mb-4 border-primary/20 bg-accent px-3 py-1 text-[10px] font-extrabold uppercase tracking-widest text-accent-foreground"
           >
-            No ads. No affiliate links. Just math.
+            No ads. Reader-Supported. Just math.
           </Badge>
           <h1 className="mb-3 text-4xl font-black leading-tight text-foreground sm:text-5xl text-balance">
             Is it actually <span className="text-primary">worth it?</span>
