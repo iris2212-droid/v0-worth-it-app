@@ -20,7 +20,7 @@ import {
   type PresetKey,
   type UnitSystem,
 } from "@/lib/calculator";
-import { HYSACalculator } from "@/components/hysa-calculator";
+import HysaCalculator from "@/components/hysa-calculator";
 import { EVCalculator } from "@/components/ev-calculator";
 import { RecommendedTools } from "@/components/recommended-tools";
 import { TrustFAQ } from "@/components/trust-faq";
