@@ -71,19 +71,19 @@ const REVIEWS: ReviewCard[] = [
     href: "#wealthfront-view",
   },
  {
-    id: "centier-bank",
-    name: "Centier Bank (via Raisin)",
-    apy: "3.95% APY + Bonus",
-    highlights: [
-      { icon: <Building2 className="size-3.5" />, label: "$1,500 bonus with code HEADSTART" },
-      { icon: <ShieldCheck className="size-3.5" />, label: "No monthly fees or minimums" },
-      { icon: <Star className="size-3.5" />, label: "FDIC insured via partner banks" },
-    ],
-    verdict:
-      "The 'Mathematical Winner.' When you factor in the $1,500 bonus, this is the highest effective yield on the market for 2026.",
-    cta: "Claim $1,500 Bonus",
-    href: "https://raisin.sjv.io/c/7012475/3806997/14380",
-  },
+  id: "centier-bank",
+  name: "Centier Bank (via Raisin)",
+  apy: "3.95% APY + Bonus",
+  highlights: [
+    { icon: <Building2 className="size-3.5" />, label: "Up to $1,500 bonus with code HEADSTART" },
+    { icon: <ShieldCheck className="size-3.5" />, label: "No monthly fees or minimums" },
+    { icon: <Star className="size-3.5" />, label: "FDIC insured via partner banks" },
+  ],
+  verdict:
+    "The 'Mathematical Winner.' When you factor in the potential Up to $1,500 bonus, this is the highest effective yield on the market for 2026.",
+  cta: "Claim Up to $1,500 Bonus",
+  href: "https://raisin.sjv.io/c/7012475/3806997/14380",
+},
 ];
 
 export function TopReviews() {
