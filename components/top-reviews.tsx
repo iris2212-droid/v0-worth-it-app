@@ -70,19 +70,19 @@ const REVIEWS: ReviewCard[] = [
     cta: "View Wealthfront",
     href: "#wealthfront-view",
   },
-  {
-    id: "marcus",
-    name: "Marcus by Goldman Sachs",
-    apy: "4.00%",
+ {
+    id: "centier-bank",
+    name: "Centier Bank (via Raisin)",
+    apy: "3.95% APY + Bonus",
     highlights: [
-      { icon: <Building2 className="size-3.5" />, label: "Goldman Sachs security and backing" },
-      { icon: <ShieldCheck className="size-3.5" />, label: "No minimums, no fees, FDIC insured" },
-      { icon: <Star className="size-3.5" />, label: "No-penalty CDs available for rate-locking" },
+      { icon: <Building2 className="size-3.5" />, label: "$1,500 bonus with code HEADSTART" },
+      { icon: <ShieldCheck className="size-3.5" />, label: "No monthly fees or minimums" },
+      { icon: <Star className="size-3.5" />, label: "FDIC insured via partner banks" },
     ],
     verdict:
-      "The \"boring in the best way\" choice. Goldman Sachs backing means institutional-grade security. No games, no tricks -- just a clean, reliable savings account.",
-    cta: "Explore Marcus",
-    href: "#marcus-explore",
+      "The 'Mathematical Winner.' When you factor in the $1,500 bonus, this is the highest effective yield on the market for 2026.",
+    cta: "Claim $1,500 Bonus",
+    href: "https://raisin.sjv.io/c/7012475/3806997/14380",
   },
 ];
 
