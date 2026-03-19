@@ -236,7 +236,7 @@ export default function WorthItPage() {
           </TabsList>
 
           <TabsContent value="hysa">
-            <HYSACalculator symbol={symbol} />
+            <HysaCalculator symbol={symbol} />
           </TabsContent>
           <TabsContent value="ev">
             <EVCalculator symbol={symbol} unit={unit} />
