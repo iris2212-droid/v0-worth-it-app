@@ -27,7 +27,7 @@ export function RecommendedTools({ preset }: RecommendedToolsProps) {
             Recommended Tools for {regionLabel}
           </h2>
           <p className="text-[11px] text-muted-foreground">
-            Based on your detected location. Placeholder links only.
+            Top-tier financial tools for your region.</p>
           </p>
         </div>
       </div>
@@ -68,7 +68,7 @@ export function RecommendedTools({ preset }: RecommendedToolsProps) {
       </div>
 
       <p className="text-center text-[10px] text-muted-foreground/60">
-        Links are placeholders for demonstration. We are not affiliated with any of these products.
+      Disclosure: We partner with some of these providers to keep this tool free for you.  
       </p>
     </div>
   );
