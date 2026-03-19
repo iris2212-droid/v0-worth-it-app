@@ -26,7 +26,7 @@ interface HYSAProps {
 const SMART_RATE = 4.5;
 const LAZY_RATE = 0.01;
 
-export function HYSACalculator({ symbol }: HYSAProps) {
+export default function HysaCalculator({ symbol }: HYSAProps)
   const [deposit, setDeposit] = useState(10000);
   const [monthly, setMonthly] = useState(200);
   const [hyRate, setHyRate] = useState(SMART_RATE);
