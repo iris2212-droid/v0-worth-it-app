@@ -27,7 +27,7 @@ export function RecommendedTools({ preset }: RecommendedToolsProps) {
             Recommended Tools for {regionLabel}
           </h2>
           <p className="text-[11px] text-muted-foreground">
-            Top-tier financial tools for your region.</p>
+            Top-tier financial tools for your region.
           </p>
         </div>
       </div>
