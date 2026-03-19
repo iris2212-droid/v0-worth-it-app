@@ -22,7 +22,7 @@ export function RecommendedTools({ preset }: RecommendedToolsProps) {
         <div className="flex size-8 items-center justify-center rounded-lg bg-primary/10">
           <MapPin className="size-4 text-primary" />
         </div>
-        <div>
+       <div>
           <h2 className="text-sm font-extrabold text-foreground">
             Recommended Tools for {regionLabel}
           </h2>
