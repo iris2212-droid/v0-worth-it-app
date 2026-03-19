@@ -112,10 +112,28 @@ export interface RecommendedTool {
 }
 
 export const RECOMMENDED_TOOLS: Record<PresetKey, RecommendedTool[]> = {
-  USA: [
-    { name: "SoFi", description: "4.50% APY, no minimums, FDIC-insured.", cta: "Open SoFi Account", href: "#sofi-us", tag: "HYSA" },
-    { name: "Ally Bank", description: "Top-tier rates with strong mobile banking.", cta: "Open Ally Account", href: "#ally-us", tag: "HYSA" },
-    { name: "Wealthfront", description: "High APY + automated savings features.", cta: "Open Wealthfront Account", href: "#wealthfront-us", tag: "HYSA + Investing" },
+ USA: [
+    { 
+      name: "Centier Bank (via Raisin)", 
+      description: "Earn 3.95% APY + up to $1,500 bonus with code HEADSTART. Limited time offer until 3/30.", 
+      cta: "Claim $1,500 Bonus", 
+      href: "https://raisin.sjv.io/c/7012475/3806997/14380", 
+      tag: "Best Rate" 
+    },
+    { 
+      name: "Raisin", 
+      description: "Access high-yield savings products from dozens of banks through a single account.", 
+      cta: "Explore All Rates", 
+      href: "https://raisin.sjv.io/c/7012475/3806997/14380", // Using the same link is fine for now
+      tag: "Marketplace" 
+    },
+    { 
+      name: "Worth It? Index", 
+      description: "Helping you calculate the 'Lazy Tax' and move money to where it actually grows.", 
+      cta: "Review Math", 
+      href: "#", 
+      tag: "Community" 
+    },
   ],
   UK: [
     { name: "Zopa", description: "Leading UK savings rate with FSCS protection.", cta: "Open Zopa Account", href: "#zopa-uk", tag: "Savings" },
