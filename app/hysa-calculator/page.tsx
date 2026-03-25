@@ -1,8 +1,8 @@
 import { Metadata } from 'next'
-import Header from "@/components/header"
-import Footer from "@/components/footer"
-import { BestHighYieldCalculator } from "@/components/best-high-yield-calculator"
-import { TopReviews } from "@/components/top-reviews"
+import Header from "../components/header"
+import Footer from "../components/footer"
+import { BestHighYieldCalculator } from "../components/best-high-yield-calculator"
+import { TopReviews } from "../components/top-reviews"
 
 export const metadata: Metadata = {
   title: 'High Yield Savings Calculator — Worth It? Index',
