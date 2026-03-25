@@ -10,14 +10,17 @@ export const metadata: Metadata = {
   title: 'Worth It? Index — Real Math, No Salesmen',
   description: 'Interactive financial calculators that cut through the noise. Compare HYSA vs big banks and calculate EV breakeven points.',
   generator: 'v0.app',
- verification: {
-  google: "MKryDx7XS6jEgZCJVOESbTFfjhkY1MUgTfI0LtIRDLQ",
-  other: {
-    "impact-site-verification": "11c4d98e-c4d4-48ca-96ef-5cb368827ab4"
-  }
- },
+  metadataBase: new URL('https://worthitindex.com'),
+  alternates: {
+    canonical: '/',
+  },
+  verification: {
+    google: "MKryDx7XS6jEgZCJVOESbTFfjhkY1MUgTfI0LtIRDLQ",
+    other: {
+      "impact-site-verification": "11c4d98e-c4d4-48ca-96ef-5cb368827ab4"
+    }
+  },
 }
-
 export default function RootLayout({
   children,
 }: Readonly<{
