@@ -1,8 +1,8 @@
 import { Metadata } from 'next'
-import Header from "../header"
-import Footer from "../footer"
-import { BestHighYieldCalculator } from "../best-high-yield-calculator"
-import { TopReviews } from "../top-reviews"
+import Header from "@/app/header"
+import Footer from "@/app/footer"
+import { BestHighYieldCalculator } from "@/app/best-high-yield-calculator"
+import { TopReviews } from "@/app/top-reviews"
 
 export const metadata: Metadata = {
   title: 'High Yield Savings Calculator — Worth It? Index',
