@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import Header from "@/components/Header"
 import Footer from "@/components/Footer"
 import { BestHighYieldCalculator } from "@/components/best-high-yield-calculator"
-import { AffiliateCards } from "@/components/affiliate-cards" // Ensure this matches your filename
+import { TopReviews } from "@/components/top-reviews" 
 
 export const metadata: Metadata = {
   title: 'High Yield Savings Calculator — Worth It? Index',
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 export default function HYSAPage() {
   return (
     <div className="flex flex-col min-h-screen bg-background">
-      {/* 1. Restoration of Navigation & Country Switcher */}
+      {/* Restores the Global Navigation */}
       <Header />
 
       <main className="flex-grow container mx-auto px-4 py-12">
@@ -30,23 +30,22 @@ export default function HYSAPage() {
             </p>
           </section>
 
-          {/* 2. The Interactive Calculator */}
+          {/* The Calculator itself */}
           <div className="rounded-xl border bg-card text-card-foreground shadow-sm p-6">
             <BestHighYieldCalculator />
           </div>
 
-          {/* 3. The Money-Maker (Affiliate Conversion) */}
+          {/* The Affiliate Section (Raisin, SoFi, etc.) */}
           <section className="pt-8 border-t">
             <h2 className="text-3xl font-bold text-center mb-8">
               Stop the Bleeding: Top Mathematical Winners
             </h2>
-            <AffiliateCards />
+            <TopReviews />
           </section>
 
         </div>
       </main>
 
-      {/* 4. Professional Footer */}
       <Footer />
     </div>
   )
