@@ -211,7 +211,9 @@ export function EVCalculator({ symbol, unit }: EVProps) {
     </p>
 
     <a
-      href="/go/leaseend"
+      href="https://leaseend.sjv.io/DWWeby"
+      target="_blank"
+      rel="noopener noreferrer"
       className="inline-block text-sm font-medium text-green-600 hover:underline"
     >
       View EV lease options →
