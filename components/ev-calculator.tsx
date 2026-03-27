@@ -196,7 +196,29 @@ export function EVCalculator({ symbol, unit }: EVProps) {
         </div>
         <CopyButton text={shareText} />
       </div>
+      
+{/* Affiliate: Lease End */}
+{calc.annualSaving > 0 && (
+  <div className="mt-4 rounded-xl border bg-card p-4 shadow-sm">
+    <p className="text-xs text-muted-foreground mb-1">Partner</p>
 
+    <h3 className="font-semibold mb-1">
+      Ready to switch to electric?
+    </h3>
+
+    <p className="text-sm text-muted-foreground mb-3">
+      If the numbers make sense, explore EV leasing and financing options tailored to your budget.
+    </p>
+
+    <a
+      href="/go/leaseend"
+      className="inline-block text-sm font-medium text-green-600 hover:underline"
+    >
+      View EV lease options →
+    </a>
+  </div>
+)}
+      
       {/* Chart */}
       <div className="rounded-xl border bg-card p-5 shadow-sm">
         <p className="mb-4 flex items-center gap-2 text-[13px] font-bold text-card-foreground">
