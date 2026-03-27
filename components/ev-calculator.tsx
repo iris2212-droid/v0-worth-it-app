@@ -313,3 +313,29 @@ export function EVCalculator({ symbol, unit }: EVProps) {
     </div>
   );
 }
+
+{/* Bottom CTA: Lease End */}
+{calc.annualSaving > 0 && (
+  <div className="mt-6 rounded-2xl border bg-gradient-to-br from-green-50 to-white p-5 shadow-sm">
+    <p className="text-xs text-muted-foreground mb-1">Partner</p>
+
+    <h3 className="text-lg font-semibold mb-2">
+      Your next move
+    </h3>
+
+    <p className="text-sm text-muted-foreground mb-4">
+      Based on your inputs, switching to an EV could save you{" "}
+      <strong>{formatCurrency(calc.annualSaving, symbol)}/year</strong>.
+      Explore leasing options and see what fits your budget.
+    </p>
+
+    <a
+      href="https://leaseend.sjv.io/DWWeby"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-block rounded-lg bg-green-600 px-4 py-2 text-sm font-medium text-white hover:bg-green-700"
+    >
+      Explore EV lease options →
+    </a>
+  </div>
+)}
