@@ -112,10 +112,10 @@ export interface RecommendedTool {
 }
 
 export const RECOMMENDED_TOOLS: Record<PresetKey, RecommendedTool[]> = {
- USA: [
+  USA: [
     { 
       name: "Centier Bank (via Raisin)", 
-      description: "Earn 3.95% APY + up to $1,500 bonus with code HEADSTART. Limited time offer until 3/30.", 
+      description: "Earn 3.95% APY + up to $1,500 bonus with code HEADSTART.", 
       cta: "Claim $1,500 Bonus", 
       href: "https://raisin.sjv.io/c/7012475/3806997/14380", 
       tag: "Best Rate" 
@@ -124,7 +124,7 @@ export const RECOMMENDED_TOOLS: Record<PresetKey, RecommendedTool[]> = {
       name: "Raisin", 
       description: "Access high-yield savings products from dozens of banks through a single account.", 
       cta: "Explore All Rates", 
-      href: "https://raisin.sjv.io/c/7012475/3806997/14380", // Using the same link is fine for now
+      href: "https://raisin.sjv.io/c/7012475/3806997/14380",
       tag: "Marketplace" 
     },
     { 
@@ -135,24 +135,45 @@ export const RECOMMENDED_TOOLS: Record<PresetKey, RecommendedTool[]> = {
       tag: "Community" 
     },
   ],
+
   UK: [
-  {
-    name: "Raisin UK",
-    description: "Compare UK savings rates and see how much more your money could earn. Access fixed and easy-access accounts up to ~4.60% AER, all in one place.",
-    cta: "Compare savings accounts",
-    href: "https://raisin-uk.pxf.io/VOOLK3",
-    tag: "Best Rates",
-  },
-  {
-    name: "Zopa",
-    description: "Simple, high-interest savings with FSCS protection and flexible access.",
-    cta: "Open Zopa Account",
-    href: "#zopa-uk",
-    tag: "Savings",
-  },
+    {
+      name: "Raisin UK",
+      description: "Compare UK savings rates and see how much more your money could earn. Access fixed and easy-access accounts up to ~4.60% AER.",
+      cta: "Compare savings accounts",
+      href: "https://raisin-uk.pxf.io/VOOLK3",
+      tag: "Best Rates",
+    },
+    {
+      name: "Zopa",
+      description: "Simple, high-interest savings with FSCS protection and flexible access.",
+      cta: "Open Zopa Account",
+      href: "#zopa-uk",
+      tag: "Savings",
+    },
+  ],
+
   EU: [
-    { name: "Revolut", description: "Multi-currency savings vaults across the EU.", cta: "Open Revolut Account", href: "#revolut-eu", tag: "Savings" },
-    { name: "N26", description: "German-licensed neobank with instant savings.", cta: "Open N26 Account", href: "#n26-eu", tag: "Savings" },
-    { name: "Trade Republic", description: "Interest on uninvested cash with no lock-in.", cta: "Open Trade Republic Account", href: "#traderepublic-eu", tag: "Savings + Investing" },
+    { 
+      name: "Revolut", 
+      description: "Multi-currency savings vaults across the EU.", 
+      cta: "Open Revolut Account", 
+      href: "#revolut-eu", 
+      tag: "Savings" 
+    },
+    { 
+      name: "N26", 
+      description: "German-licensed neobank with instant savings.", 
+      cta: "Open N26 Account", 
+      href: "#n26-eu", 
+      tag: "Savings" 
+    },
+    { 
+      name: "Trade Republic", 
+      description: "Interest on uninvested cash with no lock-in.", 
+      cta: "Open Trade Republic Account", 
+      href: "#traderepublic-eu", 
+      tag: "Savings + Investing" 
+    },
   ],
 };
