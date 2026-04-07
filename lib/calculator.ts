@@ -115,7 +115,7 @@ export const RECOMMENDED_TOOLS: Record<PresetKey, RecommendedTool[]> = {
   USA: [
     { 
       name: "Centier Bank (via Raisin)", 
-      description: "Earn 3.95% APY + up to $1,500 bonus with code HEADSTART.", 
+      description: "Earn 3.95% APY + up to $1,500 bonus with code FRESHSTART.", 
       cta: "Claim $1,500 Bonus", 
       href: "https://raisin.sjv.io/c/7012475/3806997/14380", 
       tag: "Best Rate" 
