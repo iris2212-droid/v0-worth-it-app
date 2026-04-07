@@ -150,21 +150,7 @@ export const RECOMMENDED_TOOLS: Record<PresetKey, RecommendedTool[]> = {
     href: "#zopa-uk",
     tag: "Savings",
   },
-  {
-    name: "Chase UK",
-    description: "Earn cashback on spending with a linked savings account offering competitive rates.",
-    cta: "Open Chase UK Account",
-    href: "#chase-uk",
-    tag: "Current + Savings",
-  },
-  {
-    name: "Monzo",
-    description: "Smart savings pots with instant access and powerful budgeting tools.",
-    cta: "Open Monzo Account",
-    href: "#monzo-uk",
-    tag: "Savings",
-  },
-],
+
   EU: [
     { name: "Revolut", description: "Multi-currency savings vaults across the EU.", cta: "Open Revolut Account", href: "#revolut-eu", tag: "Savings" },
     { name: "N26", description: "German-licensed neobank with instant savings.", cta: "Open N26 Account", href: "#n26-eu", tag: "Savings" },
