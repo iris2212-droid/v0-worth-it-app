@@ -127,13 +127,6 @@ export const RECOMMENDED_TOOLS: Record<PresetKey, RecommendedTool[]> = {
       href: "https://raisin.sjv.io/c/7012475/3806997/14380",
       tag: "Marketplace" 
     },
-    { 
-      name: "Worth It? Index", 
-      description: "Helping you calculate the 'Lazy Tax' and move money to where it actually grows.", 
-      cta: "Review Math", 
-      href: "#", 
-      tag: "Community" 
-    },
   ],
 
   UK: [
