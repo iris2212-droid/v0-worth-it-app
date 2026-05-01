@@ -201,30 +201,7 @@ export default function WorthItPage() {
 
       {/* Main content */}
       <main className="mx-auto max-w-3xl px-4 pb-16 pt-6">
-       {/* Raisin UK Promo Banner */}
-<div className="mb-6 rounded-2xl border border-green-200 bg-green-50 p-5 shadow-sm">
-  <p className="mb-1 text-xs font-bold uppercase tracking-wide text-green-700">
-    🇬🇧 Limited-Time UK Offer
-  </p>
 
-  <h2 className="mb-1 text-xl font-black text-green-900">
-    Raisin UK Welcome Bonus
-  </h2>
-
-  <p className="mb-3 text-sm leading-relaxed text-green-800">
-    New customers can earn a welcome bonus on eligible fixed-term deposits.
-    Use code <strong>WELCOME</strong> before <strong>April 30</strong>.
-  </p>
-
-  <a
-    href="https://raisin-uk.pxf.io/c/7012475/3857902/12683?sharedid=uk-bonus-worthit-highlightbox-0426"
-    target="_blank"
-    rel="noopener noreferrer sponsored"
-    className="inline-block rounded-lg bg-green-700 px-4 py-2 text-sm font-bold text-white transition hover:bg-green-800"
-  >
-    Claim Bonus Offer →
-  </a>
-</div>
         <Tabs defaultValue="hysa" className="w-full">
           <TabsList className="mb-7 grid h-auto w-full grid-cols-2 gap-2 rounded-2xl bg-secondary p-1.5">
             <TabsTrigger
