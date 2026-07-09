@@ -48,7 +48,7 @@ export default function PrivacyPolicyPage() {
           <Section title="1. Overview">
             <p>
               Worth It? Index {"(\"we,\" \"us,\" or \"our\")"} operates the
-              worthitindex.app website. This page informs you of our policies
+              worthitindex.com website. This page informs you of our policies
               regarding the collection, use, and disclosure of information when
               you use our service.
             </p>
