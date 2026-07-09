@@ -203,20 +203,20 @@ export function EVCalculator({ symbol, unit }: EVProps) {
     <p className="text-xs text-muted-foreground mb-1">Partner</p>
 
     <h3 className="font-semibold mb-1">
-      Ready to switch to electric?
+      Lease End — buy out your current lease
     </h3>
 
     <p className="text-sm text-muted-foreground mb-3">
-      If the numbers make sense, explore EV leasing and financing options tailored to your budget.
+      Already leasing and the math above makes sense? Lease End handles the paperwork to buy out your lease without the dealer markup.
     </p>
 
-    <a
+    
       href="https://leaseend.sjv.io/DWWeby"
       target="_blank"
       rel="noopener noreferrer"
       className="inline-block text-sm font-medium text-green-600 hover:underline"
     >
-      View EV lease options →
+      Check your buyout options with Lease End →
     </a>
   </div>
 )}
