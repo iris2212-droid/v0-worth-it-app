@@ -4,9 +4,5 @@ export default function sitemap() {
       url: 'https://worthitindex.com',
       lastModified: new Date(),
     },
-    {
-      url: 'https://worthitindex.com/hysa-calculator',
-      lastModified: new Date(),
-    },
   ]
 }
