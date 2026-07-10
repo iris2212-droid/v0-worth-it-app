@@ -112,11 +112,12 @@ export interface RecommendedTool {
 }
 
 export const RECOMMENDED_TOOLS: Record<PresetKey, RecommendedTool[]> = {
+export const RECOMMENDED_TOOLS: Record<PresetKey, RecommendedTool[]> = {
   USA: [
     { 
       name: "Centier Bank (via Raisin)", 
-      description: "Earn 3.85% APY + up to $1,200 bonus with code SUMMER26.", 
-      cta: "Claim $1,200 Bonus", 
+      description: "Earn 3.85% APY plus a current signup bonus, shown at checkout.", 
+      cta: "Check Current Bonus", 
       href: "https://raisin.sjv.io/c/7012475/3806997/14380", 
       tag: "Best Rate" 
     },
@@ -137,16 +138,10 @@ export const RECOMMENDED_TOOLS: Record<PresetKey, RecommendedTool[]> = {
       href: "https://raisin-uk.pxf.io/VOOLK3",
       tag: "Best Rates",
     },
-    {
-      name: "Zopa",
-      description: "Simple, high-interest savings with FSCS protection and flexible access.",
-      cta: "Open Zopa Account",
-      href: "#zopa-uk",
-      tag: "Savings",
-    },
   ],
 
-  EU: [
+  EU: [],
+};
     { 
       name: "Revolut", 
       description: "Multi-currency savings vaults across the EU.", 
