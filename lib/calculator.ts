@@ -115,8 +115,8 @@ export const RECOMMENDED_TOOLS: Record<PresetKey, RecommendedTool[]> = {
   USA: [
     { 
       name: "Centier Bank (via Raisin)", 
-      description: "Earn 3.95% APY + up to $1,500 bonus with code FRESHSTART.", 
-      cta: "Claim $1,500 Bonus", 
+      description: "Earn 3.85% APY + up to $1,200 bonus with code SUMMER26.", 
+      cta: "Claim $1,200 Bonus", 
       href: "https://raisin.sjv.io/c/7012475/3806997/14380", 
       tag: "Best Rate" 
     },
@@ -132,7 +132,7 @@ export const RECOMMENDED_TOOLS: Record<PresetKey, RecommendedTool[]> = {
   UK: [
     {
       name: "Raisin UK",
-      description: "Compare UK savings rates and see how much more your money could earn. Access fixed and easy-access accounts up to ~4.60% AER.",
+      description: "Compare UK savings rates and see how much more your money could earn. Access fixed and easy-access accounts up to ~4.67% AER.",
       cta: "Compare savings accounts",
       href: "https://raisin-uk.pxf.io/VOOLK3",
       tag: "Best Rates",
