@@ -67,7 +67,7 @@ export default function RootLayout({
                 <p className="text-slate-500 text-[12px] leading-relaxed">
                   <strong>Financial Disclaimer:</strong> The calculations provided by Worth It? Index are for illustrative and educational purposes only. 
                   Calculations are based on user inputs and market averages which may change. <strong>We do not provide financial advice.</strong> 
-                  Please consult with a licensed financial professional in your jurisdiction (e.g., ASIC in Australia) before making financial decisions.
+                  Please consult with a licensed financial professional in your country before making financial decisions.
                 </p>
                 <p className="text-slate-500 text-[12px] mt-4 leading-relaxed">
                   <strong>Affiliate Disclosure:</strong> To keep this platform free and ad-free, we may receive a commission if you click on 
