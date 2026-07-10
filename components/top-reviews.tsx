@@ -38,25 +38,25 @@ interface ReviewCard {
 }
 
 const REVIEWS: ReviewCard[] = [
-  {
-    id: "sofi",
-    name: "SoFi",
-    apy: "4.50%",
-    highlights: [
-      { icon: <Star className="size-3.5" />, label: "4.50% APY with direct deposit" },
-      { icon: <ShieldCheck className="size-3.5" />, label: "FDIC insured up to $2M via partner banks" },
-      { icon: <Zap className="size-3.5" />, label: "No account fees, no minimums" },
-    ],
-    caveat: {
-      label: "Wait! Read this",
-      text: "The 4.50% rate requires a qualifying direct deposit. Without it, you get 1.00%. Make sure your paycheck goes here first.",
-    },
-    verdict:
-      "Best all-in-one option if you route your paycheck through it. The direct deposit unlock is the key -- do that, and it beats almost everyone.",
-    cta: "Check SoFi Rates",
-    href: "https://www.sofi.com/banking/", // Replace with your link if applicable
+{
+  id: "sofi",
+  name: "SoFi",
+  apy: "3.80%",
+  highlights: [
+    { icon: <Star className="size-3.5" />, label: "3.80% APY with direct deposit" },
+    { icon: <ShieldCheck className="size-3.5" />, label: "FDIC insured up to $2M via partner banks" },
+    { icon: <Zap className="size-3.5" />, label: "No account fees, no minimums" },
+    { icon: <Gift className="size-3.5" />, label: "Up to $400 direct deposit bonus, no code needed" },
+  ],
+  caveat: {
+    label: "Wait! Read this",
+    text: "The 3.80% rate and the cash bonus both require a qualifying direct deposit. Without it, you get 1.00% APY and no bonus. Make sure your paycheck goes here first.",
   },
-  {
+  verdict:
+    "Best all-in-one option if you route your paycheck through it. The direct deposit unlock is the key -- do that, and it beats almost everyone, plus you get a cash bonus on top.",
+  cta: "Check SoFi Rates",
+  href: "https://www.sofi.com/banking/", // Replace with your link if applicable
+},
     id: "wealthfront",
     name: "Wealthfront",
     apy: "4.25%",
