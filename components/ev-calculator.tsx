@@ -208,7 +208,7 @@ export function EVCalculator({ symbol, unit }: EVProps) {
       Already leasing and the math above makes sense? Lease End handles the paperwork to buy out your lease without the dealer markup.
     </p>
     
-      href="https://leaseend.sjv.io/DWWeby"
+    <a href="https://leaseend.sjv.io/DWWeby"
       target="_blank"
       rel="noopener noreferrer"
       className="inline-block text-sm font-medium text-green-600 hover:underline"
