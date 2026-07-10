@@ -56,6 +56,7 @@ const REVIEWS: ReviewCard[] = [
     "Best all-in-one option if you route your paycheck through it. The direct deposit unlock is the key -- do that, and it beats almost everyone, plus you get a cash bonus on top.",
   cta: "Check SoFi Rates",
   href: "https://www.sofi.com/banking/", // Replace with your link if applicable
+},
 {
   id: "wealthfront",
   name: "Wealthfront",
