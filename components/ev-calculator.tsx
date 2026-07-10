@@ -201,15 +201,12 @@ export function EVCalculator({ symbol, unit }: EVProps) {
 {calc.annualSaving > 0 && (
   <div className="mt-4 rounded-xl border bg-card p-4 shadow-sm">
     <p className="text-xs text-muted-foreground mb-1">Partner</p>
-
     <h3 className="font-semibold mb-1">
       Lease End — buy out your current lease
     </h3>
-
     <p className="text-sm text-muted-foreground mb-3">
       Already leasing and the math above makes sense? Lease End handles the paperwork to buy out your lease without the dealer markup.
     </p>
-
     
       href="https://leaseend.sjv.io/DWWeby"
       target="_blank"
