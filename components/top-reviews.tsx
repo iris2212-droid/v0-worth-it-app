@@ -3,6 +3,7 @@
 import {
   ShieldCheck,
   ExternalLink,
+  Gift, 
   Zap,
   Building2,
   AlertTriangle,
