@@ -56,29 +56,33 @@ const REVIEWS: ReviewCard[] = [
     "Best all-in-one option if you route your paycheck through it. The direct deposit unlock is the key -- do that, and it beats almost everyone, plus you get a cash bonus on top.",
   cta: "Check SoFi Rates",
   href: "https://www.sofi.com/banking/", // Replace with your link if applicable
-},
-    id: "wealthfront",
-    name: "Wealthfront",
-    apy: "4.25%",
-    highlights: [
-      { icon: <Zap className="size-3.5" />, label: "Fastest transfers -- often same-day" },
-      { icon: <Star className="size-3.5" />, label: "High APY with no hoops to jump through" },
-      { icon: <ShieldCheck className="size-3.5" />, label: "FDIC insured up to $8M via partner banks" },
-    ],
-    verdict:
-      "The no-strings-attached pick. High APY without needing direct deposit, plus the fastest transfer times in the category. Set it and forget it.",
-    cta: "View Wealthfront",
-    href: "https://www.wealthfront.com/cash", // Replace with your link if applicable
+{
+  id: "wealthfront",
+  name: "Wealthfront",
+  apy: "3.30% (up to 3.95% for new clients)",
+  highlights: [
+    { icon: <Zap className="size-3.5" />, label: "Fastest transfers -- often same-day" },
+    { icon: <Star className="size-3.5" />, label: "3.95% APY for new clients, first 3 months" },
+    { icon: <ShieldCheck className="size-3.5" />, label: "FDIC insured up to $8M via partner banks" },
+  ],
+  caveat: {
+    label: "Wait! Read this",
+    text: "3.95% is a new-client promo capped at $150,000 for 3 months, then it drops to the 3.30% base -- unless you direct deposit $1,000/month and keep an active investing account, which unlocks a permanent +0.25%.",
   },
-  {
-    id: "centier-bank",
-    name: "Centier Bank (via Raisin)",
-    apy: "3.85% APY + Bonus",
-    highlights: [
-      { icon: <Building2 className="size-3.5" />, label: "Up to $1,200 bonus with code SUMMER26" },
-      { icon: <ShieldCheck className="size-3.5" />, label: "No monthly fees or minimums" },
-      { icon: <Star className="size-3.5" />, label: "FDIC insured via partner banks" },
-    ],
+  verdict:
+    "A strong pick even at the 3.30% base, with genuinely fast transfers. The new-client boost is a nice bonus, but don't expect 3.95% to last past month 3 unless you meet the direct deposit + investing conditions.",
+  cta: "View Wealthfront",
+  href: "https://www.wealthfront.com/cash", // Replace with your link if applicable
+},
+{
+  id: "centier-bank",
+  name: "Centier Bank (via Raisin)",
+  apy: "3.85% APY + Bonus",
+  highlights: [
+    { icon: <Building2 className="size-3.5" />, label: "Current signup bonus shown at checkout" },
+    { icon: <ShieldCheck className="size-3.5" />, label: "No monthly fees or minimums" },
+    { icon: <Star className="size-3.5" />, label: "FDIC insured via partner banks" },
+  ],
     verdict:
       "The 'Mathematical Winner.' When you factor in the potential Up to $1,200 bonus, this is the highest effective yield on the market for 2026.",
     cta: "Claim Up to $1,200 Bonus",
