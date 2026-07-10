@@ -60,8 +60,7 @@ export function EVCalculator({ symbol, unit }: EVProps) {
     };
   }, [gasPrice, mpg, annualMiles, premium, kwhCost, maintSavings, isMetric]);
 
-  const shareText = `Worth It? -- EV Breakeven\nGas: ${formatCurrency(calc.annualGas, symbol)}/yr -> EV: ${formatCurrency(calc.annualElec, symbol)}/yr\nNet Saving: ${formatCurrency(calc.annualSaving, symbol)}/yr\nBreakeven: ${calc.breakevenMonths === Infinity ? "Never" : `${calc.breakevenMonths} months`}\nworthitindex.app`;
-
+  const shareText = `Worth It? -- EV Breakeven\nGas: ${formatCurrency(calc.annualGas, symbol)}/yr -> EV: ${formatCurrency(calc.annualElec, symbol)}/yr\nNet Saving: ${formatCurrency(calc.annualSaving, symbol)}/yr\nBreakeven: ${calc.breakevenMonths === Infinity ? "Never" : `${calc.breakevenMonths} months`}\nworthitindex.com`;
   const bgClass =
     calc.breakevenYears <= 5
       ? "from-[#065f46] to-[#047857]"
