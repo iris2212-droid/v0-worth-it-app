@@ -141,26 +141,4 @@ export const RECOMMENDED_TOOLS: Record<PresetKey, RecommendedTool[]> = {
 
   EU: [],
 };
-    { 
-      name: "Revolut", 
-      description: "Multi-currency savings vaults across the EU.", 
-      cta: "Open Revolut Account", 
-      href: "#revolut-eu", 
-      tag: "Savings" 
-    },
-    { 
-      name: "N26", 
-      description: "German-licensed neobank with instant savings.", 
-      cta: "Open N26 Account", 
-      href: "#n26-eu", 
-      tag: "Savings" 
-    },
-    { 
-      name: "Trade Republic", 
-      description: "Interest on uninvested cash with no lock-in.", 
-      cta: "Open Trade Republic Account", 
-      href: "#traderepublic-eu", 
-      tag: "Savings + Investing" 
-    },
-  ],
-};
+
